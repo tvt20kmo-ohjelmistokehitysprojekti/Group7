@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'confirmwithdraw.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,13 +10,12 @@
 #define UI_CONFIRMWITHDRAW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -24,23 +23,43 @@ QT_BEGIN_NAMESPACE
 class Ui_ConfirmWithdraw
 {
 public:
-    QFrame *frame;
-    QLabel *nameLbl;
-    QPushButton *cancelBtn;
+    QVBoxLayout *verticalLayout;
     QLabel *imgLbl;
+    QFrame *frame;
+    QGridLayout *gridLayout_2;
+    QLabel *nameLbl;
+    QLabel *label;
     QLabel *chooseLbl;
     QPushButton *confirmBtn;
+    QPushButton *cancelBtn;
     QLabel *statusLbl;
+    QLabel *label_2;
 
     void setupUi(QWidget *ConfirmWithdraw)
     {
         if (ConfirmWithdraw->objectName().isEmpty())
-            ConfirmWithdraw->setObjectName(QStringLiteral("ConfirmWithdraw"));
-        ConfirmWithdraw->resize(741, 375);
-        ConfirmWithdraw->setStyleSheet(QStringLiteral("background-color: white;"));
+            ConfirmWithdraw->setObjectName(QString::fromUtf8("ConfirmWithdraw"));
+        ConfirmWithdraw->resize(945, 610);
+        ConfirmWithdraw->setStyleSheet(QString::fromUtf8("background-color: white;"));
+        verticalLayout = new QVBoxLayout(ConfirmWithdraw);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        imgLbl = new QLabel(ConfirmWithdraw);
+        imgLbl->setObjectName(QString::fromUtf8("imgLbl"));
+        imgLbl->setFrameShape(QFrame::NoFrame);
+        imgLbl->setFrameShadow(QFrame::Plain);
+        imgLbl->setPixmap(QPixmap(QString::fromUtf8("ATM_Logo.bmp")));
+
+        verticalLayout->addWidget(imgLbl);
+
         frame = new QFrame(ConfirmWithdraw);
-        frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(0, 70, 741, 51));
+        frame->setObjectName(QString::fromUtf8("frame"));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy);
+        frame->setMinimumSize(QSize(400, 100));
+        frame->setMaximumSize(QSize(16777215, 100));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -75,6 +94,11 @@ public:
         brush8.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
+        QBrush brush9(QColor(0, 0, 0, 128));
+        brush9.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush9);
+#endif
         palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Light, brush2);
@@ -90,6 +114,11 @@ public:
         palette.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush7);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
+        QBrush brush10(QColor(0, 0, 0, 128));
+        brush10.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush10);
+#endif
         palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
         palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Light, brush2);
@@ -102,40 +131,44 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
-        QBrush brush9(QColor(238, 60, 63, 255));
-        brush9.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush9);
+        QBrush brush11(QColor(238, 60, 63, 255));
+        brush11.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush11);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
+        QBrush brush12(QColor(0, 0, 0, 128));
+        brush12.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush12);
+#endif
         frame->setPalette(palette);
         frame->setAutoFillBackground(false);
-        frame->setStyleSheet(QStringLiteral("background-color:red;"));
+        frame->setStyleSheet(QString::fromUtf8("background-color:red;"));
         frame->setFrameShape(QFrame::Box);
         frame->setFrameShadow(QFrame::Raised);
+        gridLayout_2 = new QGridLayout(frame);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         nameLbl = new QLabel(frame);
-        nameLbl->setObjectName(QStringLiteral("nameLbl"));
-        nameLbl->setGeometry(QRect(10, 10, 521, 31));
+        nameLbl->setObjectName(QString::fromUtf8("nameLbl"));
         QFont font;
-        font.setFamily(QStringLiteral("Verdana"));
+        font.setFamily(QString::fromUtf8("Verdana"));
         font.setPointSize(14);
         nameLbl->setFont(font);
-        nameLbl->setStyleSheet(QStringLiteral("QLabel { color : white; }"));
+        nameLbl->setStyleSheet(QString::fromUtf8("QLabel { color : white; }"));
         nameLbl->setTextFormat(Qt::AutoText);
-        cancelBtn = new QPushButton(ConfirmWithdraw);
-        cancelBtn->setObjectName(QStringLiteral("cancelBtn"));
-        cancelBtn->setGeometry(QRect(360, 220, 231, 101));
-        QFont font1;
-        font1.setPointSize(12);
-        cancelBtn->setFont(font1);
-        imgLbl = new QLabel(ConfirmWithdraw);
-        imgLbl->setObjectName(QStringLiteral("imgLbl"));
-        imgLbl->setGeometry(QRect(10, 0, 191, 61));
-        imgLbl->setFrameShape(QFrame::NoFrame);
-        imgLbl->setFrameShadow(QFrame::Plain);
-        imgLbl->setPixmap(QPixmap(QString::fromUtf8("ATM_Logo.bmp")));
+
+        gridLayout_2->addWidget(nameLbl, 0, 0, 1, 1, Qt::AlignVCenter);
+
+
+        verticalLayout->addWidget(frame, 0, Qt::AlignTop);
+
+        label = new QLabel(ConfirmWithdraw);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        verticalLayout->addWidget(label, 0, Qt::AlignTop);
+
         chooseLbl = new QLabel(ConfirmWithdraw);
-        chooseLbl->setObjectName(QStringLiteral("chooseLbl"));
-        chooseLbl->setGeometry(QRect(120, 150, 501, 31));
+        chooseLbl->setObjectName(QString::fromUtf8("chooseLbl"));
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::Button, brush6);
         palette1.setBrush(QPalette::Active, QPalette::Base, brush6);
@@ -147,18 +180,42 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::Base, brush6);
         palette1.setBrush(QPalette::Disabled, QPalette::Window, brush6);
         chooseLbl->setPalette(palette1);
-        QFont font2;
-        font2.setFamily(QStringLiteral("Verdana"));
-        font2.setPointSize(26);
-        chooseLbl->setFont(font2);
-        chooseLbl->setStyleSheet(QStringLiteral(""));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Verdana"));
+        font1.setPointSize(26);
+        chooseLbl->setFont(font1);
+        chooseLbl->setStyleSheet(QString::fromUtf8(""));
+
+        verticalLayout->addWidget(chooseLbl, 0, Qt::AlignHCenter);
+
         confirmBtn = new QPushButton(ConfirmWithdraw);
-        confirmBtn->setObjectName(QStringLiteral("confirmBtn"));
-        confirmBtn->setGeometry(QRect(120, 220, 231, 101));
-        confirmBtn->setFont(font1);
+        confirmBtn->setObjectName(QString::fromUtf8("confirmBtn"));
+        sizePolicy.setHeightForWidth(confirmBtn->sizePolicy().hasHeightForWidth());
+        confirmBtn->setSizePolicy(sizePolicy);
+        confirmBtn->setMinimumSize(QSize(400, 100));
+        confirmBtn->setMaximumSize(QSize(400, 100));
+        QFont font2;
+        font2.setPointSize(12);
+        confirmBtn->setFont(font2);
+        confirmBtn->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"background-color: red;"));
+
+        verticalLayout->addWidget(confirmBtn, 0, Qt::AlignHCenter);
+
+        cancelBtn = new QPushButton(ConfirmWithdraw);
+        cancelBtn->setObjectName(QString::fromUtf8("cancelBtn"));
+        sizePolicy.setHeightForWidth(cancelBtn->sizePolicy().hasHeightForWidth());
+        cancelBtn->setSizePolicy(sizePolicy);
+        cancelBtn->setMinimumSize(QSize(400, 100));
+        cancelBtn->setMaximumSize(QSize(400, 100));
+        cancelBtn->setFont(font2);
+        cancelBtn->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"background-color: red;"));
+
+        verticalLayout->addWidget(cancelBtn, 0, Qt::AlignHCenter);
+
         statusLbl = new QLabel(ConfirmWithdraw);
-        statusLbl->setObjectName(QStringLiteral("statusLbl"));
-        statusLbl->setGeometry(QRect(180, 330, 411, 31));
+        statusLbl->setObjectName(QString::fromUtf8("statusLbl"));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::Button, brush6);
         palette2.setBrush(QPalette::Active, QPalette::Base, brush6);
@@ -171,10 +228,18 @@ public:
         palette2.setBrush(QPalette::Disabled, QPalette::Window, brush6);
         statusLbl->setPalette(palette2);
         QFont font3;
-        font3.setFamily(QStringLiteral("Verdana"));
+        font3.setFamily(QString::fromUtf8("Verdana"));
         font3.setPointSize(12);
         statusLbl->setFont(font3);
-        statusLbl->setStyleSheet(QStringLiteral(""));
+        statusLbl->setStyleSheet(QString::fromUtf8(""));
+
+        verticalLayout->addWidget(statusLbl, 0, Qt::AlignHCenter);
+
+        label_2 = new QLabel(ConfirmWithdraw);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        verticalLayout->addWidget(label_2);
+
 
         retranslateUi(ConfirmWithdraw);
 
@@ -183,13 +248,15 @@ public:
 
     void retranslateUi(QWidget *ConfirmWithdraw)
     {
-        ConfirmWithdraw->setWindowTitle(QApplication::translate("ConfirmWithdraw", "ATM", Q_NULLPTR));
-        nameLbl->setText(QApplication::translate("ConfirmWithdraw", "Confirm withdraw", Q_NULLPTR));
-        cancelBtn->setText(QApplication::translate("ConfirmWithdraw", "Cancel", Q_NULLPTR));
+        ConfirmWithdraw->setWindowTitle(QCoreApplication::translate("ConfirmWithdraw", "ATM", nullptr));
         imgLbl->setText(QString());
-        chooseLbl->setText(QApplication::translate("ConfirmWithdraw", "Selected Amount: 2000.00\342\202\254", Q_NULLPTR));
-        confirmBtn->setText(QApplication::translate("ConfirmWithdraw", "Confirm and withdraw", Q_NULLPTR));
-        statusLbl->setText(QApplication::translate("ConfirmWithdraw", "Unable to withdraw: Not enough balance.", Q_NULLPTR));
+        nameLbl->setText(QCoreApplication::translate("ConfirmWithdraw", "Confirm withdraw", nullptr));
+        label->setText(QString());
+        chooseLbl->setText(QCoreApplication::translate("ConfirmWithdraw", "Selected Amount: 2000.00\342\202\254", nullptr));
+        confirmBtn->setText(QCoreApplication::translate("ConfirmWithdraw", "Confirm and withdraw", nullptr));
+        cancelBtn->setText(QCoreApplication::translate("ConfirmWithdraw", "Cancel", nullptr));
+        statusLbl->setText(QCoreApplication::translate("ConfirmWithdraw", "Unable to withdraw: Not enough balance.", nullptr));
+        label_2->setText(QString());
     } // retranslateUi
 
 };

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'customamount.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,14 +10,13 @@
 #define UI_CUSTOMAMOUNT_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,58 +24,48 @@ QT_BEGIN_NAMESPACE
 class Ui_CustomAmount
 {
 public:
+    QVBoxLayout *verticalLayout;
+    QLabel *imgLbl;
+    QFrame *frame;
+    QGridLayout *gridLayout_2;
+    QLabel *nameLbl;
+    QLabel *label;
+    QSpinBox *customVal;
+    QLabel *label_3;
     QPushButton *okBtn;
     QPushButton *cancelBtn;
     QLabel *errorLbl;
-    QSpinBox *customVal;
-    QLabel *imgLbl;
-    QFrame *frame;
-    QLabel *nameLbl;
+    QLabel *label_2;
 
     void setupUi(QWidget *CustomAmount)
     {
         if (CustomAmount->objectName().isEmpty())
-            CustomAmount->setObjectName(QStringLiteral("CustomAmount"));
-        CustomAmount->resize(649, 447);
-        CustomAmount->setStyleSheet(QStringLiteral("background-color: white;"));
-        okBtn = new QPushButton(CustomAmount);
-        okBtn->setObjectName(QStringLiteral("okBtn"));
-        okBtn->setGeometry(QRect(130, 270, 171, 71));
-        QFont font;
-        font.setPointSize(18);
-        okBtn->setFont(font);
-        cancelBtn = new QPushButton(CustomAmount);
-        cancelBtn->setObjectName(QStringLiteral("cancelBtn"));
-        cancelBtn->setGeometry(QRect(310, 270, 171, 71));
-        cancelBtn->setFont(font);
-        errorLbl = new QLabel(CustomAmount);
-        errorLbl->setObjectName(QStringLiteral("errorLbl"));
-        errorLbl->setGeometry(QRect(50, 350, 561, 61));
-        QFont font1;
-        font1.setPointSize(12);
-        errorLbl->setFont(font1);
-        customVal = new QSpinBox(CustomAmount);
-        customVal->setObjectName(QStringLiteral("customVal"));
-        customVal->setGeometry(QRect(130, 160, 351, 101));
-        QFont font2;
-        font2.setPointSize(20);
-        font2.setBold(false);
-        font2.setWeight(50);
-        customVal->setFont(font2);
-        customVal->setAccelerated(false);
-        customVal->setMinimum(5);
-        customVal->setMaximum(2000);
-        customVal->setSingleStep(20);
-        customVal->setValue(20);
+            CustomAmount->setObjectName(QString::fromUtf8("CustomAmount"));
+        CustomAmount->resize(945, 610);
+        CustomAmount->setStyleSheet(QString::fromUtf8("background-color: white;"));
+        verticalLayout = new QVBoxLayout(CustomAmount);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         imgLbl = new QLabel(CustomAmount);
-        imgLbl->setObjectName(QStringLiteral("imgLbl"));
-        imgLbl->setGeometry(QRect(10, 5, 191, 61));
+        imgLbl->setObjectName(QString::fromUtf8("imgLbl"));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(imgLbl->sizePolicy().hasHeightForWidth());
+        imgLbl->setSizePolicy(sizePolicy);
+        imgLbl->setMinimumSize(QSize(923, 60));
+        imgLbl->setMaximumSize(QSize(923, 60));
         imgLbl->setFrameShape(QFrame::NoFrame);
         imgLbl->setFrameShadow(QFrame::Plain);
         imgLbl->setPixmap(QPixmap(QString::fromUtf8("ATM_Logo.bmp")));
+
+        verticalLayout->addWidget(imgLbl);
+
         frame = new QFrame(CustomAmount);
-        frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(0, 70, 741, 51));
+        frame->setObjectName(QString::fromUtf8("frame"));
+        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy);
+        frame->setMinimumSize(QSize(400, 100));
+        frame->setMaximumSize(QSize(16777215, 100));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -111,6 +100,11 @@ public:
         brush8.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
+        QBrush brush9(QColor(0, 0, 0, 128));
+        brush9.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush9);
+#endif
         palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Light, brush2);
@@ -126,6 +120,11 @@ public:
         palette.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush7);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
+        QBrush brush10(QColor(0, 0, 0, 128));
+        brush10.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush10);
+#endif
         palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
         palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Light, brush2);
@@ -138,25 +137,105 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
-        QBrush brush9(QColor(238, 60, 63, 255));
-        brush9.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush9);
+        QBrush brush11(QColor(238, 60, 63, 255));
+        brush11.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush11);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
+        QBrush brush12(QColor(0, 0, 0, 128));
+        brush12.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush12);
+#endif
         frame->setPalette(palette);
         frame->setAutoFillBackground(false);
-        frame->setStyleSheet(QStringLiteral("background-color:red;"));
+        frame->setStyleSheet(QString::fromUtf8("background-color:red;"));
         frame->setFrameShape(QFrame::Box);
         frame->setFrameShadow(QFrame::Raised);
+        gridLayout_2 = new QGridLayout(frame);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         nameLbl = new QLabel(frame);
-        nameLbl->setObjectName(QStringLiteral("nameLbl"));
-        nameLbl->setGeometry(QRect(10, 10, 521, 31));
-        QFont font3;
-        font3.setFamily(QStringLiteral("Verdana"));
-        font3.setPointSize(14);
-        nameLbl->setFont(font3);
-        nameLbl->setStyleSheet(QStringLiteral("QLabel { color : white; }"));
+        nameLbl->setObjectName(QString::fromUtf8("nameLbl"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Verdana"));
+        font.setPointSize(14);
+        nameLbl->setFont(font);
+        nameLbl->setStyleSheet(QString::fromUtf8("QLabel { color : white; }"));
         nameLbl->setTextFormat(Qt::AutoText);
+
+        gridLayout_2->addWidget(nameLbl, 0, 0, 1, 1);
+
+
+        verticalLayout->addWidget(frame);
+
+        label = new QLabel(CustomAmount);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        verticalLayout->addWidget(label);
+
+        customVal = new QSpinBox(CustomAmount);
+        customVal->setObjectName(QString::fromUtf8("customVal"));
+        sizePolicy.setHeightForWidth(customVal->sizePolicy().hasHeightForWidth());
+        customVal->setSizePolicy(sizePolicy);
+        customVal->setMinimumSize(QSize(400, 100));
+        customVal->setMaximumSize(QSize(400, 100));
+        QFont font1;
+        font1.setPointSize(20);
+        font1.setBold(false);
+        font1.setWeight(50);
+        customVal->setFont(font1);
+        customVal->setAccelerated(false);
+        customVal->setMinimum(5);
+        customVal->setMaximum(2000);
+        customVal->setSingleStep(20);
+        customVal->setValue(20);
+
+        verticalLayout->addWidget(customVal, 0, Qt::AlignHCenter);
+
+        label_3 = new QLabel(CustomAmount);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        verticalLayout->addWidget(label_3);
+
+        okBtn = new QPushButton(CustomAmount);
+        okBtn->setObjectName(QString::fromUtf8("okBtn"));
+        sizePolicy.setHeightForWidth(okBtn->sizePolicy().hasHeightForWidth());
+        okBtn->setSizePolicy(sizePolicy);
+        okBtn->setMinimumSize(QSize(300, 100));
+        okBtn->setMaximumSize(QSize(300, 100));
+        QFont font2;
+        font2.setPointSize(18);
+        okBtn->setFont(font2);
+        okBtn->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"background-color: red;"));
+
+        verticalLayout->addWidget(okBtn, 0, Qt::AlignHCenter);
+
+        cancelBtn = new QPushButton(CustomAmount);
+        cancelBtn->setObjectName(QString::fromUtf8("cancelBtn"));
+        sizePolicy.setHeightForWidth(cancelBtn->sizePolicy().hasHeightForWidth());
+        cancelBtn->setSizePolicy(sizePolicy);
+        cancelBtn->setMinimumSize(QSize(300, 100));
+        cancelBtn->setMaximumSize(QSize(300, 100));
+        cancelBtn->setFont(font2);
+        cancelBtn->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"background-color: red;"));
+
+        verticalLayout->addWidget(cancelBtn, 0, Qt::AlignHCenter);
+
+        errorLbl = new QLabel(CustomAmount);
+        errorLbl->setObjectName(QString::fromUtf8("errorLbl"));
+        QFont font3;
+        font3.setPointSize(12);
+        errorLbl->setFont(font3);
+
+        verticalLayout->addWidget(errorLbl, 0, Qt::AlignHCenter);
+
+        label_2 = new QLabel(CustomAmount);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        verticalLayout->addWidget(label_2);
+
 
         retranslateUi(CustomAmount);
 
@@ -165,13 +244,16 @@ public:
 
     void retranslateUi(QWidget *CustomAmount)
     {
-        CustomAmount->setWindowTitle(QApplication::translate("CustomAmount", "ATM", Q_NULLPTR));
-        okBtn->setText(QApplication::translate("CustomAmount", "OK", Q_NULLPTR));
-        cancelBtn->setText(QApplication::translate("CustomAmount", "Cancel", Q_NULLPTR));
-        errorLbl->setText(QApplication::translate("CustomAmount", "Invalid amount, the value must be between 5 and 2000\342\202\254, every 5\342\202\254 minimum.", Q_NULLPTR));
-        customVal->setSuffix(QApplication::translate("CustomAmount", "\342\202\254", Q_NULLPTR));
+        CustomAmount->setWindowTitle(QCoreApplication::translate("CustomAmount", "ATM", nullptr));
         imgLbl->setText(QString());
-        nameLbl->setText(QApplication::translate("CustomAmount", "Set Amount", Q_NULLPTR));
+        nameLbl->setText(QCoreApplication::translate("CustomAmount", "Set Amount", nullptr));
+        label->setText(QString());
+        customVal->setSuffix(QCoreApplication::translate("CustomAmount", "\342\202\254", nullptr));
+        label_3->setText(QString());
+        okBtn->setText(QCoreApplication::translate("CustomAmount", "OK", nullptr));
+        cancelBtn->setText(QCoreApplication::translate("CustomAmount", "Cancel", nullptr));
+        errorLbl->setText(QCoreApplication::translate("CustomAmount", "Invalid amount, the value must be between 5 and 2000\342\202\254, every 5\342\202\254 minimum.", nullptr));
+        label_2->setText(QString());
     } // retranslateUi
 
 };

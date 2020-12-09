@@ -1,18 +1,19 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'AccountMenu.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../AccountMenu.h"
+#include <memory>
+#include "../../../../../Desktop/ATM_Projekti/ATM/ATM/AccountMenu.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'AccountMenu.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.1. It"
+#error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -48,7 +49,7 @@ QT_MOC_LITERAL(5, 85, 21) // "on_pushButton_clicked"
 static const uint qt_meta_data_AccountMenu[] = {
 
  // content:
-       7,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        4,   14, // methods
@@ -76,7 +77,7 @@ static const uint qt_meta_data_AccountMenu[] = {
 void AccountMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        AccountMenu *_t = static_cast<AccountMenu *>(_o);
+        auto *_t = static_cast<AccountMenu *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_withdrawBtn_clicked(); break;
@@ -89,10 +90,14 @@ void AccountMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     Q_UNUSED(_a);
 }
 
-const QMetaObject AccountMenu::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_AccountMenu.data,
-      qt_meta_data_AccountMenu,  qt_static_metacall, nullptr, nullptr}
-};
+QT_INIT_METAOBJECT const QMetaObject AccountMenu::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_AccountMenu.data,
+    qt_meta_data_AccountMenu,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
 const QMetaObject *AccountMenu::metaObject() const
@@ -104,7 +109,7 @@ void *AccountMenu::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_AccountMenu.stringdata0))
-        return static_cast<void*>(const_cast< AccountMenu*>(this));
+        return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 

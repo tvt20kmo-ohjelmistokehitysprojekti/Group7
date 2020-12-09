@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'transactions.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,11 +10,9 @@
 #define UI_TRANSACTIONS_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
@@ -25,41 +23,51 @@ QT_BEGIN_NAMESPACE
 class Ui_transactions
 {
 public:
-    QPushButton *pushButton;
-    QListWidget *trView;
+    QGridLayout *gridLayout;
     QLabel *imgLbl;
+    QPushButton *pushButton;
     QFrame *frame;
+    QGridLayout *gridLayout_2;
     QLabel *nameLbl;
+    QListWidget *trView;
 
     void setupUi(QWidget *transactions)
     {
         if (transactions->objectName().isEmpty())
-            transactions->setObjectName(QStringLiteral("transactions"));
-        transactions->resize(752, 681);
-        transactions->setStyleSheet(QStringLiteral("background-color:white;"));
-        pushButton = new QPushButton(transactions);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(580, 5, 161, 61));
-        QFont font;
-        font.setPointSize(12);
-        pushButton->setFont(font);
-        trView = new QListWidget(transactions);
-        trView->setObjectName(QStringLiteral("trView"));
-        trView->setGeometry(QRect(20, 150, 691, 381));
-        QFont font1;
-        font1.setPointSize(18);
-        trView->setFont(font1);
-        trView->setFrameShape(QFrame::NoFrame);
-        trView->setFrameShadow(QFrame::Sunken);
+            transactions->setObjectName(QString::fromUtf8("transactions"));
+        transactions->resize(945, 610);
+        transactions->setStyleSheet(QString::fromUtf8("background-color:white;"));
+        gridLayout = new QGridLayout(transactions);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         imgLbl = new QLabel(transactions);
-        imgLbl->setObjectName(QStringLiteral("imgLbl"));
-        imgLbl->setGeometry(QRect(10, 5, 191, 61));
+        imgLbl->setObjectName(QString::fromUtf8("imgLbl"));
         imgLbl->setFrameShape(QFrame::NoFrame);
         imgLbl->setFrameShadow(QFrame::Plain);
         imgLbl->setPixmap(QPixmap(QString::fromUtf8("ATM_Logo.bmp")));
+
+        gridLayout->addWidget(imgLbl, 0, 0, 1, 1);
+
+        pushButton = new QPushButton(transactions);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
+        pushButton->setMinimumSize(QSize(100, 60));
+        pushButton->setMaximumSize(QSize(100, 60));
+        QFont font;
+        font.setPointSize(12);
+        pushButton->setFont(font);
+
+        gridLayout->addWidget(pushButton, 0, 1, 1, 1);
+
         frame = new QFrame(transactions);
-        frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(0, 70, 741, 51));
+        frame->setObjectName(QString::fromUtf8("frame"));
+        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy);
+        frame->setMinimumSize(QSize(400, 100));
+        frame->setMaximumSize(QSize(16777215, 100));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -94,6 +102,11 @@ public:
         brush8.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
+        QBrush brush9(QColor(0, 0, 0, 128));
+        brush9.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush9);
+#endif
         palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Light, brush2);
@@ -109,6 +122,11 @@ public:
         palette.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush7);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
+        QBrush brush10(QColor(0, 0, 0, 128));
+        brush10.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush10);
+#endif
         palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
         palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Light, brush2);
@@ -121,25 +139,47 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
-        QBrush brush9(QColor(238, 60, 63, 255));
-        brush9.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush9);
+        QBrush brush11(QColor(238, 60, 63, 255));
+        brush11.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush11);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
+        QBrush brush12(QColor(0, 0, 0, 128));
+        brush12.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush12);
+#endif
         frame->setPalette(palette);
         frame->setAutoFillBackground(false);
-        frame->setStyleSheet(QStringLiteral("background-color:red;"));
+        frame->setStyleSheet(QString::fromUtf8("background-color:red;"));
         frame->setFrameShape(QFrame::Box);
         frame->setFrameShadow(QFrame::Raised);
+        gridLayout_2 = new QGridLayout(frame);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         nameLbl = new QLabel(frame);
-        nameLbl->setObjectName(QStringLiteral("nameLbl"));
-        nameLbl->setGeometry(QRect(10, 10, 181, 31));
-        QFont font2;
-        font2.setFamily(QStringLiteral("Verdana"));
-        font2.setPointSize(14);
-        nameLbl->setFont(font2);
-        nameLbl->setStyleSheet(QStringLiteral("QLabel { color : white; }"));
+        nameLbl->setObjectName(QString::fromUtf8("nameLbl"));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Verdana"));
+        font1.setPointSize(14);
+        nameLbl->setFont(font1);
+        nameLbl->setStyleSheet(QString::fromUtf8("QLabel { color : white; }"));
         nameLbl->setTextFormat(Qt::AutoText);
+
+        gridLayout_2->addWidget(nameLbl, 0, 0, 1, 1);
+
+
+        gridLayout->addWidget(frame, 1, 0, 1, 2);
+
+        trView = new QListWidget(transactions);
+        trView->setObjectName(QString::fromUtf8("trView"));
+        QFont font2;
+        font2.setPointSize(18);
+        trView->setFont(font2);
+        trView->setFrameShape(QFrame::NoFrame);
+        trView->setFrameShadow(QFrame::Sunken);
+
+        gridLayout->addWidget(trView, 2, 0, 1, 2);
+
 
         retranslateUi(transactions);
 
@@ -148,10 +188,10 @@ public:
 
     void retranslateUi(QWidget *transactions)
     {
-        transactions->setWindowTitle(QApplication::translate("transactions", "ATM", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("transactions", "Back", Q_NULLPTR));
+        transactions->setWindowTitle(QCoreApplication::translate("transactions", "ATM", nullptr));
         imgLbl->setText(QString());
-        nameLbl->setText(QApplication::translate("transactions", "Transactions", Q_NULLPTR));
+        pushButton->setText(QCoreApplication::translate("transactions", "Back", nullptr));
+        nameLbl->setText(QCoreApplication::translate("transactions", "Transactions", nullptr));
     } // retranslateUi
 
 };

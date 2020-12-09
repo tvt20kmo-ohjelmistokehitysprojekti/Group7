@@ -1,18 +1,19 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'confirmwithdraw.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../confirmwithdraw.h"
+#include <memory>
+#include "../../../../../Desktop/ATM_Projekti/ATM/ATM/confirmwithdraw.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'confirmwithdraw.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.1. It"
+#error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -46,7 +47,7 @@ QT_MOC_LITERAL(4, 53, 20) // "on_cancelBtn_clicked"
 static const uint qt_meta_data_ConfirmWithdraw[] = {
 
  // content:
-       7,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -72,7 +73,7 @@ static const uint qt_meta_data_ConfirmWithdraw[] = {
 void ConfirmWithdraw::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        ConfirmWithdraw *_t = static_cast<ConfirmWithdraw *>(_o);
+        auto *_t = static_cast<ConfirmWithdraw *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->WithdrawMoney(); break;
@@ -84,10 +85,14 @@ void ConfirmWithdraw::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
     Q_UNUSED(_a);
 }
 
-const QMetaObject ConfirmWithdraw::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_ConfirmWithdraw.data,
-      qt_meta_data_ConfirmWithdraw,  qt_static_metacall, nullptr, nullptr}
-};
+QT_INIT_METAOBJECT const QMetaObject ConfirmWithdraw::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_ConfirmWithdraw.data,
+    qt_meta_data_ConfirmWithdraw,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
 const QMetaObject *ConfirmWithdraw::metaObject() const
@@ -99,7 +104,7 @@ void *ConfirmWithdraw::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_ConfirmWithdraw.stringdata0))
-        return static_cast<void*>(const_cast< ConfirmWithdraw*>(this));
+        return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
