@@ -280,7 +280,6 @@ public:
 
         MainWindow->setCentralWidget(centralWidget);
         QWidget::setTabOrder(id_lnEdit, pw_lnEdit);
-        QWidget::setTabOrder(pw_lnEdit, LogInBtn);
 
         retranslateUi(MainWindow);
 

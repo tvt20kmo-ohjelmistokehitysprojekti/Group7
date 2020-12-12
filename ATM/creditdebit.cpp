@@ -1,13 +1,12 @@
-#include "mainwindow.h"
 #include "AccountMenu.h"
 #include "creditdebit.h"
 #include "ui_creditdebit.h"
+#include "mainwindow.h"
 int iCardType;
 
 CreditDebit::CreditDebit(QWidget *parent) : QWidget(parent), ui(new Ui::CreditDebit)
 {
     ui->setupUi(this);
-    //this->showMaximized();
 }
 
 CreditDebit::~CreditDebit()
@@ -15,30 +14,22 @@ CreditDebit::~CreditDebit()
     delete ui;
 }
 
-void selectCard(int cardType)
-{
-    iCardType = cardType;
-    AccountMenu *w = new AccountMenu;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-}
-
 void CreditDebit::on_creditBtn_clicked()
 {
-    selectCard(CARD_CREDIT);
-    this->close();
+    iCardType = CARD_CREDIT;
+    AccountMenu *w = new AccountMenu;
+    ChangeWindow(this, w);
 }
 
 void CreditDebit::on_debitBtn_clicked()
 {
-    selectCard(CARD_DEBIT);
-    this->close();
+    iCardType = CARD_DEBIT;
+    AccountMenu *w = new AccountMenu;
+    ChangeWindow(this, w);
 }
 
 void CreditDebit::on_pushButton_clicked()
 {
     MainWindow *w = new MainWindow;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-    this->close();
+    ChangeWindow(this, w);
 }

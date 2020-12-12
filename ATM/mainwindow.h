@@ -38,5 +38,6 @@ private:
 #endif // MAINWINDOW_H
 
 QString ReadURL(QString URL);
+void ChangeWindow(QWidget* window, QWidget* w);
 extern int userID;
 extern QString fullname;
