@@ -18,6 +18,17 @@ QString ReadURL(QString URL)
     return response->readAll();
 }
 
+void ChangeWindow(QWidget* window, QWidget* w)
+{
+    w->setAttribute(Qt::WA_DeleteOnClose);
+    QRect geo = window->geometry();
+    w->setGeometry(geo.x(), geo.y(), geo.width(), geo.height());
+    if(window->isMaximized())
+        w->showMaximized();
+    w->show();
+    window->close();
+}
+
 int Login(QString tempNumber, QString tempPass)
 {
     if(tempNumber.length() < 7 || tempPass.length() < 3)
@@ -44,7 +55,6 @@ int Login(QString tempNumber, QString tempPass)
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //this->showMaximized();
     ui->responseLbl->setVisible(false);
 }
 
@@ -73,9 +83,7 @@ void MainWindow::on_LogInBtn_clicked()
             ui->responseLbl->setText("");
             ui->responseLbl->setVisible(false);
             CreditDebit *w = new CreditDebit;
-            w->setAttribute(Qt::WA_DeleteOnClose);
-            w->show();
-            this->close();
+            ChangeWindow(this, w);
             break;
     };
     ui->LogInBtn->setEnabled(true);

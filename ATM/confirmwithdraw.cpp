@@ -55,7 +55,5 @@ void ConfirmWithdraw::on_confirmBtn_clicked()
 void ConfirmWithdraw::on_cancelBtn_clicked()
 {
     Withdraw *w = new Withdraw;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-    this->close();
+    ChangeWindow(this, w);
 }

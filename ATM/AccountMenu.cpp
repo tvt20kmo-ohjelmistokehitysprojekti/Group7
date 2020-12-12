@@ -28,9 +28,7 @@ void AccountMenu::on_withdrawBtn_clicked()
     ui->balanceBtn->setEnabled(false);
     ui->transactiondBtn->setEnabled(false);
     Withdraw *w = new Withdraw;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-    this->close();
+    ChangeWindow(this, w);
 }
 
 void AccountMenu::on_balanceBtn_clicked()
@@ -39,9 +37,7 @@ void AccountMenu::on_balanceBtn_clicked()
     ui->balanceBtn->setEnabled(false);
     ui->transactiondBtn->setEnabled(false);
     Balance *w = new Balance;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-    this->close();
+    ChangeWindow(this, w);
 }
 
 void AccountMenu::on_transactiondBtn_clicked()
@@ -50,15 +46,11 @@ void AccountMenu::on_transactiondBtn_clicked()
     ui->balanceBtn->setEnabled(false);
     ui->transactiondBtn->setEnabled(false);
     transactions *w = new transactions;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-    this->close();
+    ChangeWindow(this, w);
 }
 
 void AccountMenu::on_pushButton_clicked()
 {
     CreditDebit *w = new CreditDebit;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-    this->close();
+    ChangeWindow(this, w);
 }

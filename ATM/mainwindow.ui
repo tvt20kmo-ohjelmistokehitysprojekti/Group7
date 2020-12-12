@@ -773,7 +773,6 @@ background-color: red;</string>
  <tabstops>
   <tabstop>id_lnEdit</tabstop>
   <tabstop>pw_lnEdit</tabstop>
-  <tabstop>LogInBtn</tabstop>
  </tabstops>
  <resources/>
  <connections/>

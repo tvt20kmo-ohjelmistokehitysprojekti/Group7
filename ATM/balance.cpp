@@ -41,7 +41,5 @@ Balance::~Balance()
 void Balance::on_pushButton_clicked()
 {
     AccountMenu *w = new AccountMenu;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    w->show();
-    this->close();
+    ChangeWindow(this, w);
 }

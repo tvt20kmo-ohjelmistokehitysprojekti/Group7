@@ -195,7 +195,7 @@ public:
         confirmBtn->setMinimumSize(QSize(400, 100));
         confirmBtn->setMaximumSize(QSize(400, 100));
         QFont font2;
-        font2.setPointSize(12);
+        font2.setPointSize(18);
         confirmBtn->setFont(font2);
         confirmBtn->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "background-color: red;"));
